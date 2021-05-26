@@ -79,15 +79,55 @@
 <!-- badges: start -->
 
 <!-- badges: end -->
+<div id="features" class="section level2">
+<h2 class="hasAnchor">
+<a href="#features" class="anchor"></a>Features</h2>
+<table class="table">
+<thead><tr class="header">
+<th>
+Feature
+</th>
+<th>
+Example
+</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>
+Define types
+</td>
+<td>
+<code>type.numeric &lt;- typeCheck::type_define(check = is.numeric)</code>
+</td>
+</tr>
+<tr class="even">
+<td>
+Declare types
+</td>
+<td>
+<code>f &lt;- function(x = ? numeric) identity(x)</code>
+</td>
+</tr>
+<tr class="odd">
+<td>
+Check types
+</td>
+<td>
+<code>f &lt;- typeCheck::type_check(f)</code>
+</td>
+</tr>
+</tbody>
+</table>
 <!-- ## Example -->
+</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of <code>typing</code> from CRAN with:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">"typing"</span>)</span></code></pre></div>
 <p>And the development version from GitHub with:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># install.packages("devtools")</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"tidylab/typing"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># install.packages("remotes")</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"tidylab/typing"</span>)</span></code></pre></div>
 <!--
 * https://github.com/jimhester/types
 * https://github.com/jimhester/typeCheck
