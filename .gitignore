@@ -1,0 +1,18 @@
+# Folders
+docs/
+man/
+renv/
+*_cache/
+
+# Files
+CRAN-RELEASE
+.Renviron
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.png
+renv.lock
+docs
+
+cran-comments.md
