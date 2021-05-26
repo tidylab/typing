@@ -1,3 +1,20 @@
+---
+output: github_document
+bibliography: [./inst/REFERENCES.bib]
+biblio-style: apalike
+link-citations: yes
+editor_options: 
+  canonical: true
+  markdown: 
+    wrap: 80
+    references: 
+      location: section
+---
+
+```{r, include = FALSE}
+source(file.path(usethis::proj_get(), "vignettes",  "_common.R"))
+```
+
 # `typing` <img src="https://raw.githubusercontent.com/tidylab/typing/master/pkgdown/logo.png" align="right" height="75"/>
 
 <!-- badges: start -->
@@ -9,18 +26,49 @@ status](https://github.com/tidylab/typing/workflows/R-CMD-check/badge.svg)](http
 [![codecov](https://codecov.io/gh/tidylab/typing/branch/master/graph/badge.svg?token=U6FL5N32FL)](https://codecov.io/gh/tidylab/typing)
 
 <!-- badges: end -->
+
+
 <!-- ## Example -->
+
+```{r, echo=!TRUE, eval=FALSE}
+# `?` <- types::`?`
+type.numeric <- typeCheck::type_define(check = is.numeric)
+type.null <- typeCheck::type_define(check = is.null)
+
+f <- function(x = 1 ? numeric ? null) {
+  x + 1
+}
+
+g <- typeCheck::type_check(f)
+
+f(x = TRUE)
+
+g(x = NULL)
+
+g(x = TRUE)
+
+# g <- function(x = ? numeric) {
+#   x + 1
+# }
+
+
+
+```
 
 ## Installation
 
 You can install the released version of `typing` from CRAN with:
 
-    install.packages("typing")
+``` r
+install.packages("typing")
+```
 
 And the development version from GitHub with:
 
-    # install.packages("devtools")
-    devtools::install_github("tidylab/typing")
+``` r
+# install.packages("devtools")
+devtools::install_github("tidylab/typing")
+```
 
 <!--
 * https://github.com/jimhester/types

@@ -1,0 +1,29 @@
+# Folders
+^\..*/
+^\.Rproj\.user$
+.*_cache/
+^data-raw/
+^inst/snippets/
+^renv/
+^vignettes/
+
+# Files
+^\..*
+^.*\.Rproj$
+^codecov\.yml$
+^cran-comments\.md$
+^CRAN-RELEASE$
+^README\.Rmd$
+^LICENSE\.md$
+^vignettes/_common.R$
+
+# Docker
+^docker-compose\.yml$
+^R/utils-DockerCompose\.R$
+
+# pkgdown$
+^docs$
+^pkgdown$
+
+
+
