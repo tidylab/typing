@@ -27,6 +27,13 @@ status](https://github.com/tidylab/typing/workflows/R-CMD-check/badge.svg)](http
 
 <!-- badges: end -->
 
+## Features
+
+| Feature       | Example                                                      |
+|---------------|--------------------------------------------------------------|
+| Define types  | `type.numeric <- typeCheck::type_define(check = is.numeric)` |
+| Declare types | `f <- function(x = ? numeric) identity(x)`                   |
+| Check types   | `f <- typeCheck::type_check(f)`                              |
 
 <!-- ## Example -->
 
@@ -50,9 +57,6 @@ g(x = TRUE)
 # g <- function(x = ? numeric) {
 #   x + 1
 # }
-
-
-
 ```
 
 ## Installation
@@ -66,8 +70,8 @@ install.packages("typing")
 And the development version from GitHub with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("tidylab/typing")
+# install.packages("remotes")
+remotes::install_github("tidylab/typing")
 ```
 
 <!--

@@ -1,3 +1,4 @@
+
 # `typing` <img src="https://raw.githubusercontent.com/tidylab/typing/master/pkgdown/logo.png" align="right" height="75"/>
 
 <!-- badges: start -->
@@ -9,18 +10,31 @@ status](https://github.com/tidylab/typing/workflows/R-CMD-check/badge.svg)](http
 [![codecov](https://codecov.io/gh/tidylab/typing/branch/master/graph/badge.svg?token=U6FL5N32FL)](https://codecov.io/gh/tidylab/typing)
 
 <!-- badges: end -->
+
+## Features
+
+| Feature       | Example                                                      |
+|---------------|--------------------------------------------------------------|
+| Define types  | `type.numeric <- typeCheck::type_define(check = is.numeric)` |
+| Declare types | `f <- function(x = ? numeric) identity(x)`                   |
+| Check types   | `f <- typeCheck::type_check(f)`                              |
+
 <!-- ## Example -->
 
 ## Installation
 
 You can install the released version of `typing` from CRAN with:
 
-    install.packages("typing")
+``` r
+install.packages("typing")
+```
 
 And the development version from GitHub with:
 
-    # install.packages("devtools")
-    devtools::install_github("tidylab/typing")
+``` r
+# install.packages("remotes")
+remotes::install_github("tidylab/typing")
+```
 
 <!--
 * https://github.com/jimhester/types
